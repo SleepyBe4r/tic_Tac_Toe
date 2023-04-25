@@ -1,0 +1,136 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: Bubblegums;
+    src: url(../fonts/BUBBLEGUMS.TTF);
+}
+
+@font-face {
+    font-family: GOODDOG;
+    src: url(../fonts/GOODDP__.TTF);
+}
+
+@keyframes GrowAndShrink{
+    0%  {transform: scale(1) rotate(0deg);}
+    25% {transform: scale(1.4) rotate(3deg);}
+    50% {transform: scale(1) rotate(0deg);}
+    75% {transform: scale(1.4) rotate(-3deg);}
+    100%{transform: scale(1) rotate(0deg);}
+}
+
+@keyframes HQ{
+    0%  {transform: scale(0) ;}
+    50% {transform: scale(1.2) ;}
+    70% {transform: scale(0.8) ;}
+    90% {transform: scale(1.2) ;}
+    100%{transform: scale(1) ;}
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: whitesmoke;
+    overflow: hidden;    
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: antiquewhite;
+    z-index: 0;
+}
+
+.front_title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: inherit;
+    width: inherit;
+    z-index: 1;
+}
+
+.blur{
+    backdrop-filter: blur(4px);
+    height: inherit;
+    width: inherit;
+}
+
+.front_title_box{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: inherit;
+    width: inherit;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;   
+}
+
+.front_title_box_top > h1{
+    font-family: Bubblegums;    
+    animation: GrowAndShrink 3s infinite ease-in-out;
+}
+
+.front_title_box_middle > h1{
+    font-family: GOODDOG;
+    font-size: 60px;    
+}
+
+.front_title_box_middle > button{
+    
+    font-size: 60px;    
+}
+
+.box {
+    display: grid;
+    justify-content: space-around;
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 30px;
+    background-color: whitesmoke;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;    
+    box-shadow: 0px 0px 10px 5px gray;
+}
+
+.box div {
+    border-style: solid;
+    border-width: 2px;
+    transition: all 0.6s;
+}
+
+.box div:hover {
+    background-color: rgb(216, 215, 215);
+    cursor: pointer;
+}
+
+.box_Container_1, .box_Container_2,
+.box_Container_3 {
+    border-top-width: 0px!important;
+}
+
+.box_Container_3, .box_Container_6,
+.box_Container_9 {     
+    border-right-width: 0px!important;
+}
+
+.box_Container_1, .box_Container_4,
+.box_Container_7 {     
+    border-left-width: 0px!important;
+}
+
+.box_Container_7, .box_Container_8,
+.box_Container_9 {     
+    border-bottom-width: 0px!important;
+}
