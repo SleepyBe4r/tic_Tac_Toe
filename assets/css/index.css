@@ -105,6 +105,9 @@ main {
 }
 
 .box div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-style: solid;
     border-width: 2px;
     transition: all 0.6s;
@@ -134,3 +137,9 @@ main {
 .box_Container_9 {     
     border-bottom-width: 0px!important;
 }
+
+/*.box_Container_1 > i {
+    display: flex;
+    height: 20px;
+    width: 20px;
+}*/
