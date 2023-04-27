@@ -73,7 +73,7 @@ main {
     height: inherit;
     width: inherit;
     grid-template-columns: 100%;
-    grid-template-rows: auto auto auto;   
+    grid-template-rows: 1fr 1fr 1fr;   
 }
 
 .front_title_top > h1{
@@ -81,14 +81,116 @@ main {
     animation: GrowAndShrink 3s infinite ease-in-out;
 }
 
-.front_title_middle > h1{
-    font-family: GOODDOG;
-    font-size: 60px;    
+.front_title_middle {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 2fr ;
 }
 
-.front_title_middle > button{
+.front_title_middle > .front_title_middle_label > label{
+    font-family: GOODDOG;
+    white-space: nowrap;
+    font-size: 400%;
+}
+
+.front_title_middle_button {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: inherit;
+    width: inherit;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;   
     
-    font-size: 60px;    
+}
+
+.front_title_middle_button > div  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: inherit;
+    width: inherit;    
+    margin: 0px 2px;
+}
+
+.front_title_middle_button > div > button {
+    height: 10vh;
+    width: 10vh;    
+    color: black;
+    background-color: whitesmoke;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 100%;
+    transition: all 0.4s ease;
+}
+
+.front_title_middle_button > div > button:hover {
+    transform: scale(1.1);    
+    transform-style: preserve-3d;
+    border-color: black;
+    background-color: black;
+    fill: whitesmoke;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.front_title_middle_button > div > button > svg,
+.front_title_middle_button > div > button > embed {
+    height: 70%;
+    width: 70%;
+}
+
+.front_title_middle_button > div > button:hover > svg,
+.front_title_middle_button > div > button:hover > embed {
+    transform: rotate(360deg);    
+    transition: all 0.8s ease;
+}
+
+.front_title_middle_button > div > button:not(:hover) > svg,
+.front_title_middle_button > div > button:not(:hover) > embed {
+    transform: rotate(-360deg);
+    transition: all 0.8s ease;
+}
+
+.front_title_middle_button > div > button:hover > embed {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.front_title_middle_button > div > button:disabled {
+    height: 10vh;
+    width: 10vh;    
+    color: black;
+    background-color: dimgray;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 100%;
+    transition: all 0.4s ease;
+}
+
+.front_title_middle_button > div > button:disabled:hover {
+    transform: scale(1);   
+    cursor: default; 
+}
+
+.front_title_middle_button > div > button:disabled > svg,
+.front_title_middle_button > div > button:disabled > embed {
+    transform: rotate(0deg);    
+    transition: all 0.8s ease;
+}
+
+.front_title_middle_button > div > button:disabled:hover > svg,
+.front_title_middle_button > div > button:disabled:hover > embed {
+    transform: rotate(-0deg);
+    transition: all 0.8s ease;
 }
 
 .box_page{

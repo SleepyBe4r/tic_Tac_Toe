@@ -19,8 +19,8 @@ var div_2c = "";
 var div_3c = "";
 
 function StartGame (btn_Selected,btn_Selected_Id){
-    console.log(btn_Selected_Id);
-    document.getElementById(btn_Selected_Id).style.display = "none";
+    //console.log(btn_Selected_Id);
+    document.getElementById(btn_Selected_Id).disabled = true;
     if (player_one_has_Symbol == false) {
         player_one_Symbol = btn_Selected_Id;
         player_one_has_Symbol = true;
@@ -29,8 +29,6 @@ function StartGame (btn_Selected,btn_Selected_Id){
         player_two_Symbol = btn_Selected_Id;
         player_two_has_Symbol = true;
     }
-
-    document.getElementById(btn_Selected_Id).style.display = "none";
 
     if (player_one_has_Symbol == true && player_two_has_Symbol == true) {
         document.getElementById("front_title").style.display = "none";
@@ -77,7 +75,17 @@ function RoundStart(div_Selected_id) {
             case "btn_EGG":
                 document.getElementById("box_page_top").innerHTML = "<h1 class=''><i class='fas fa-egg'></i> is the winner</h1>";
                 break;
+            case "btn_XBOX":
+                document.getElementById("box_page_top").innerHTML = "<h1 class=''><i class='fab fa-xbox'></i> is the winner</h1>";
+                break;
+            case "btn_PLAYSTATION":
+                document.getElementById("box_page_top").innerHTML = "<h1 class=''><i class='fab fa-playstation'></i> is the winner</h1>";
+                break;
+            case "btn_STEAM":
+                document.getElementById("box_page_top").innerHTML = "<h1 class=''><i class='fab fa-steam-symbol'></i> is the winner</h1>";
+                break;
             default:
+                document.getElementById("box_page_top").innerHTML = "<h1 class=''><i class='fas fa-questions'></i> is the winner</h1>";
                 break;
         }
         
@@ -135,7 +143,17 @@ function InsertSymbol(div_Selected_id, player_symbol) {
         case "btn_EGG":
             document.getElementById(div_Selected_id).innerHTML = "<i id='icon' class='fas fa-egg'></i>";
             break;
+        case "btn_XBOX":
+            document.getElementById(div_Selected_id).innerHTML = "<i id='icon' class='fab fa-xbox'></i>";
+            break;
+        case "btn_PLAYSTATION":
+            document.getElementById(div_Selected_id).innerHTML = "<i id='icon' class='fab fa-playstation'></i>";
+            break;
+        case "btn_STEAM":
+            document.getElementById(div_Selected_id).innerHTML = "<i id='icon' class='fab fa-steam-symbol'></i>";
+            break;
         default:
+            document.getElementById(div_Selected_id).innerHTML = "<i id='icon' class='fas fa-question'></i>";
             break;
     }
 }
@@ -203,6 +221,15 @@ function CheckWhichPlayerWon(player_Who_Won) {
             winner = player_Who_Won;
             break;
         case "btn_EGG":
+            winner = player_Who_Won;
+            break;
+        case "btn_XBOX":
+            winner = player_Who_Won;
+            break;
+        case "btn_PLAYSTATION":
+            winner = player_Who_Won;
+            break;
+        case "btn_STEAM":
             winner = player_Who_Won;
             break;
         default:
