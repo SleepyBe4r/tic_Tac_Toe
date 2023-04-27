@@ -40,7 +40,7 @@ body {
 }
 
 main {
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -65,7 +65,7 @@ main {
     width: inherit;
 }
 
-.front_title_box{
+.front_title{
     display: grid;
     align-items: center;
     justify-content: center;
@@ -76,19 +76,38 @@ main {
     grid-template-rows: auto auto auto;   
 }
 
-.front_title_box_top > h1{
+.front_title_top > h1{
     font-family: Bubblegums;    
     animation: GrowAndShrink 3s infinite ease-in-out;
 }
 
-.front_title_box_middle > h1{
+.front_title_middle > h1{
     font-family: GOODDOG;
     font-size: 60px;    
 }
 
-.front_title_box_middle > button{
+.front_title_middle > button{
     
     font-size: 60px;    
+}
+
+.box_page{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: inherit;
+    width: inherit;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr;   
+    transition: all 1s;
+}
+
+.box_page > div {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;    
 }
 
 .box {
@@ -138,8 +157,7 @@ main {
     border-bottom-width: 0px!important;
 }
 
-/*.box_Container_1 > i {
-    display: flex;
-    height: 20px;
-    width: 20px;
-}*/
+#icon {
+    height: 50%;
+    width: 50%;
+}

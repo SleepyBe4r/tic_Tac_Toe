@@ -5,41 +5,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./assets/fonts/FontAwesome/all.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/index.css">
     <title>Document</title>
 </head>
     <body>
         <main>
-            <div id="front_title_page" class="front_title">
+            <div id="front_title" class="front_title">
                 <div class="blur">
-                    <div class="front_title_box">
-                        <div class="front_title_box_top">
+                    <div class="front_title">
+                        <div class="front_title_top">
                             <h1>Tic-Tac-Toe</h1>
                         </div>
-                        <div class="front_title_box_middle">
+                        <div class="front_title_middle">
                             <h1>Choose your Symbol</h1>
-                            <button onclick="StartGame(this.value,id)" id="btn_X" value="1a" class="btn_icon">X</button>
-                            <button onclick="StartGame(this.value, id)" id="btn_O" value="1b" class="btn_icon">O</button>
-                            <button onclick="StartGame(this.value, id)" id="btn_L" value="1c" class="btn_icon">L</button>
+                            <button onclick="StartGame(this.value,id)" id="btn_X" value="1a" class="btn_icon"><i class="fas fa-xmark"></i></button>
+                            <button onclick="StartGame(this.value, id)" id="btn_O" value="1b" class="btn_icon"><i class="fas fa-o"></i></button>
+                            <button onclick="StartGame(this.value, id)" id="btn_BIRD" value="1c" class="btn_icon"><i class="fas fa-dove"></i></button>
+                            <button onclick="StartGame(this.value, id)" id="btn_EGG" value="1d" class="btn_icon"><i class="fas fa-egg"></i></button>
                         </div>
-                        <div class="front_title_box_bottom">
+                        <div class="front_title_bottom">
 
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="box">
-                <div onclick="RoundStart(id)" id="box_C_1a" class="box_Container_1"></div>
-                <div onclick="RoundStart(id)" id="box_C_2a" class="box_Container_2"></div>
-                <div onclick="RoundStart(id)" id="box_C_3a" class="box_Container_3"></div>
-                <div onclick="RoundStart(id)" id="box_C_1b" class="box_Container_4"></div>
-                <div onclick="RoundStart(id)" id="box_C_2b" class="box_Container_5"></div>
-                <div onclick="RoundStart(id)" id="box_C_3b" class="box_Container_6"></div>
-                <div onclick="RoundStart(id)" id="box_C_1c" class="box_Container_7"></div>
-                <div onclick="RoundStart(id)" id="box_C_2c" class="box_Container_8"></div>
-                <div onclick="RoundStart(id)" id="box_C_3c" class="box_Container_9"></div>
+            <div id="box_page" class="box_page">
+                <div id="box_page_top" class="box_page_top"></div>
+                <div class="box_page_middle">
+                    <div class="box">
+                        <div onclick="RoundStart(id)" id="box_C_1a" class="box_Container_1"></div>
+                        <div onclick="RoundStart(id)" id="box_C_2a" class="box_Container_2"></div>
+                        <div onclick="RoundStart(id)" id="box_C_3a" class="box_Container_3"></div>
+                        <div onclick="RoundStart(id)" id="box_C_1b" class="box_Container_4"></div>
+                        <div onclick="RoundStart(id)" id="box_C_2b" class="box_Container_5"></div>
+                        <div onclick="RoundStart(id)" id="box_C_3b" class="box_Container_6"></div>
+                        <div onclick="RoundStart(id)" id="box_C_1c" class="box_Container_7"></div>
+                        <div onclick="RoundStart(id)" id="box_C_2c" class="box_Container_8"></div>
+                        <div onclick="RoundStart(id)" id="box_C_3c" class="box_Container_9"></div>
+                    </div>
+                </div>
+                <div class="box_page_bottom"></div>
             </div>
         </main>
         <script src="./assets/js/index.js"></script>
